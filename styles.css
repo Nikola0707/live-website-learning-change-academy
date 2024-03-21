@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Color Variables */
+:root {
+  --color-primary: #483285; /* Main color used in the design */
+  --color-secondary: #ffffff;
+  --color-quinary: #f7f7f7;
+  --color-accent: #3f8cff;
+  --color-quaternary: #dd946f; /* Another color */
+  --color-quinary: #f7f7f7; /* Yet another color */
+  --primary-blue-dark: #4361ee;
+  --text-white: #f7faff;
+  --text-gray: #b5b8bc;
+  --text-color: #303651;
+  --text-color-neutral: #697089;
+  --color-tertiary: #261e5a;
+}
+/* Styles applied to the entire webpage */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-secondary);
+}
+
+/* Navigation Styles */
+/* Styles applied to the navigation menu */
+nav {
+  display: flex; /* Use flexbox to arrange children */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Center items vertically */
+  background-color: var(--color-primary); /* set background color */
+  color: var(--color-secondary); /* Set text color */
+  padding: 20px; /* Add padding to all sides */
+}
+
+/* Styles for the logo within the navigation */
+
+nav .logo a {
+  text-decoration: none; /* Remove underline */
+  color: var(--color-secondary); /* set text color */
+  font-weight: 900; /* set font weight */
+  font-size: 2rem; /* set font size 2rem === 32px */
+  border: 1px solid var(--color-quinary);
+  border-radius: 100%; /* make the border circle */
+  width: 50px; /* set the element width */
+  height: 50px; /* set the element height */
+  display: flex; /* Use flexbox to arrange children */
+  justify-content: center; /* horizontal aligment */
+  align-items: center; /* Center items vertically */
+  padding: 5px; /* Add padding to all sides */
+}
+
+/* Styles for navigation list */
+nav ul {
+  display: flex; /* Use flexbox for list items */
+  list-style-type: none; /* Remove default list style */
+}
+/* Styles for navigation list items */
+nav ul li {
+  margin-right: 20px; /* Add space between list items */
+}
+
+/* Styles for the navigation links */
+nav ul li a {
+  color: var(--color-secondary); /* set text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem; /* set font size 1.2rem === 19.2px */
+  padding: 10px 15px; /* add padding top and buttom 10px, left and right 15px */
+  display: flex;
+  align-items: center;
+}
+/* Style the navigation links on hover */
+nav ul a:hover {
+  background-color: var(--color-accent); /* set background color */
+  color: var(--color-secondary); /* set text color */
+  border-radius: 4px; /* Round corners */
+  transition: background-color 0.5s ease; /* smooth transition effect*/
+}
+
+/* Main content styles */
+main {
+  margin: 50px; /* Add maring */
+}
+/* Styles for what we do section */
+.what-we-do {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* allow items to wrap */
+}
+
+.what-we-do > div {
+  flex: 1; /* Allow children to grow and fill space */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.what-we-do p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.what-we-do img {
+  max-width: 90%; /* Ensure image doesn't exceed container width */
+  height: auto; /* set element height  */
+  border-radius: 8px; /* set element border radius  */
+  margin-left: 20px; /* set element margin left */
+}
+
+/* Projects styles */
+/* Styles for project section */
+.projects {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  padding: 0; /* add padding to all sides */
+}
+
+.articles {
+  display: flex; /*  Use flexbox*/
+  flex-wrap: wrap; /* allow items to wrap */
+  margin: 0 auto; /* center items horizontally */
+  justify-content: flex-start; /* align items flexbox start */
+  gap: 2rem; /* add space between items */
+}
+
+.articles article {
+  max-width: 320px; /* Limit maximum width of articles */
+  display: flex; /* use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* center items horizontaly */
+}
+
+.articles article figure {
+  margin-bottom: 0; /* remove bottom margin */
+}
+
+.articles article h2 {
+  margin: 0 0 1rem 0; /* set margin */
+  font-size: 1.6rem; /* set font size */
+  color: var(--color-primary); /* set text color */
+}
+
+.articles article a {
+  text-decoration: none; /* remove underline */
+  color: var(--color-quaternary); /* set text color */
+}
+
+.articles article img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+.article-preview {
+  padding: 1.5rem; /* set padding  */
+  background-color: var(--color-quinary); /* set background color */
+}
+
+.articles figure {
+  width: 100%; /* set width */
+  height: 13rem; /* set height */
+  overflow: hidden; /* hide long content */
+}
+
+.articles figure img {
+  height: 100%; /* Set height to 100% */
+  object-fit: cover; /* cover container */
+  aspect-ratio: 16 / 9; /* set aspect ratio */
+}
+
+.articles article:hover img {
+  transform: scale(1.5); /* scale image onhover */
+}
+/* Our Team */
+/* Wrapper for each profile */
+.profile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-around;
+  position: relative; /* Positioning context for absolute positioned elements */
+  padding-bottom: 20px;
+}
+
+/* Profile card */
+.profile {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center children horizontally */
+  position: relative; /* Establishes positioning context for absolutely positioned elements */
+  overflow: hidden; /* Hide overflowing content */
+  width: 22rem; /* Set width */
+  height: 28rem; /* Set height */
+  border-radius: 1rem; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6); /* Add shadow */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: 0.5s; /* Smooth transition for changes */
+}
+
+/* Profile image */
+.profile .profile-image {
+  position: absolute; /* Position absolutely within its container */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Take full width of container */
+  height: 100%; /* Take full height of container */
+  z-index: 2; /* Place above other content */
+  background-color: var(--color-tertiary); /* Set background color */
+  transition: 0.5s; /* Smooth transition for changes */
+}
+
+/* Styling for profile images inside profile */
+.profile-image img {
+  height: 100%; /* Take full height of container */
+  width: 100%; /* Take full width of container */
+  object-fit: cover; /* Maintain aspect ratio and cover entire container */
+}
+
+/* Styling for profile image on hover */
+.profile:hover img {
+  opacity: 0.4; /* Reduce opacity */
+  transition: 0.5s; /* Smooth transition for changes */
+}
+
+/* Styling for profile image on hover */
+.profile:hover .profile-image {
+  transform: translateY(-104px); /* Move image upwards */
+  transition: all 0.9s; /* Smooth transition for changes */
+}
+
+/* Social icons container */
+.social-icons {
+  position: absolute; /* Position absolutely within its container */
+  display: flex; /* Use flexbox for layout */
+  gap: 0.75rem; /* Add gap between children */
+  z-index: 3; /* Place above other content */
+  bottom: 10.125rem; /* Align to bottom */
+}
+
+/* Styling for list items in social icons */
+.social-icons li {
+  list-style: none; /* Remove bullet points */
+}
+
+/* Styling for social icon links */
+.social-icons li a {
+  display: block; /* Display as block element */
+  display: flex; /* Use grid for layout */
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* Set background color */
+  font-size: 23px; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  width: 2.5rem; /* Set width */
+  height: 2.5rem; /* Set height */
+  border: 1px solid #cdcdcd; /* Add border */
+  border-radius: 0.5rem; /* Add border radius */
+  transition: 0.2s; /* Smooth transition for changes */
+  opacity: 0; /* Initially invisible */
+}
+
+/* Styling for social icon links on hover */
+.social-icons li a:hover {
+  background: var(--color-accent); /* Change background color */
+  transition: 0.2s; /* Smooth transition for changes */
+}
+
+/* Styling for social icon SVG */
+.social-icons li a svg {
+  color: var(--background); /* Set color */
+  transition: 0.2s; /* Smooth transition for changes */
+}
+
+/* Styling for social icon SVG on hover */
+.social-icons li a:hover svg {
+  color: white; /* Change color */
+  transition: 0.8s; /* Smooth transition for changes */
+  transform: rotateY(360deg); /* Rotate */
+}
+
+/* Show social icons on profile hover */
+.profile:hover .social-icons li a {
+  opacity: 1; /* Make visible */
+}
+
+/* Delay transitions for social icons */
+.profile:hover li:nth-child(1) a {
+  transition-delay: 0.1s; /* Delay transition */
+}
+
+.profile:hover li:nth-child(2) a {
+  transition-delay: 0.2s; /* Delay transition */
+}
+
+.profile:hover li:nth-child(3) a {
+  transition-delay: 0.3s; /* Delay transition */
+}
+
+.profile:hover li:nth-child(4) a {
+  transition-delay: 0.4s; /* Delay transition */
+}
+
+/* Styling for profile name */
+.profile-name {
+  position: absolute; /* Position absolutely within its container */
+  bottom: -10px; /* Align to bottom */
+  left: 0; /* Align to left */
+  z-index: 4; /* Place above other content */
+  width: 100%; /* Take full width of container */
+  height: 7rem; /* Set height */
+  padding: 0.75rem 0.875rem; /* Add padding */
+  z-index: 1; /* Place above other content */
+  color: #333; /* Set text color */
+  background-color: #fff; /* Set background color */
+  text-align: left; /* Align text to left */
+}
+.profile-bio {
+  width: 90%;
+}
+/* Styling for profile name on hover */
+.profile:hover .profile-name {
+  background-color: #fff; /* Change background color */
+}
+
+/* Styling for h2 within profile name */
+.profile-name h2 {
+  margin-bottom: 0.5rem; /* Add bottom margin */
+}
+
+/* Subscription */
+.subscription-container {
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center children horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 4rem 2rem; /* Set the gap between items */
+}
+
+.subscription-card {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange child elements in a column */
+  align-items: center; /* Center children horizontally */
+  max-width: 28rem; /* Maximum width */
+  background-color: var(--color-primary); /* Background color */
+  border-radius: 0.5rem; /* Rounded corners */
+  color: var(--text-white); /* Text color */
+  position: relative; /* Positioning context for absolute elements */
+  transition: all 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.subscription-card:hover {
+  transform: translateY(-2rem); /* Move card up on hover */
+}
+
+.subscription-card-primary {
+  border-radius: 0 0 0.5rem 0.5rem; /*Rounded bottom corners*/
+}
+.subscription-card-price {
+  color: var(--text-white); /* text color */
+  font-weight: 700; /* Bold font weight */
+  font-size: 2rem; /* Font size of 32px */
+}
+.subscription-card-banner {
+  width: 100%; /* Full width */
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: absolute; /* Position absolutely within its container */
+  top: -2.5rem; /* Position from top */
+  background-color: var(--color-accent); /* Background color */
+  height: 2.5rem; /* Element height */
+  border-top-left-radius: 0.5rem; /* top left corner rounded */
+  border-top-right-radius: 0.5rem; /* top righ cornenr rounded */
+  font-weight: 700; /* bold font weight */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+.price-original {
+  color: var(--text-gray); /* Text color */
+  font-weight: 500; /* font weight */
+  margin-top: 2rem; /* margin from the top */
+  font-size: 1.5rem; /* font size */
+}
+
+.subscription-card > h3 {
+  margin: 0; /* remove all margin  */
+  font-weight: 700; /* Bold font weight */
+  font-size: 2rem; /* font size */
+}
+
+.subscription-card > .enroll {
+  color: var(--text-white); /* text color */
+  width: 100%; /* full width */
+  font-weight: 700; /* bold font weight */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* center children verically */
+  justify-content: center; /* center children horizontally  */
+  min-height: 3rem; /* Minimum height */
+  text-decoration: none; /* remove underline */
+  letter-spacing: 0.75px; /* Letter spacing */
+  background-color: var(--color-accent); /* Background color */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.subscription-card > .enroll:hover {
+  background-color: var(--primary-blue-dark); /* Darker background on hover */
+}
+
+.subscription-card > ul {
+  width: 90%; /* 90% width */
+  display: flex; /* Use flexbox laypot  */
+  flex-direction: column; /* Arrange items in a column */
+  gap: 1rem; /* Gap between items */
+  margin-bottom: 2.5rem; /* Margin from the bottom */
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-primary); /* Background color */
+  display: flex; /* Display as flex container  */
+  align-items: center; /* Align items verically */
+  flex-direction: column; /* Arrange items in column */
+}
+.footer-wrapper {
+  background-color: var(--color-primary); /* Background color */
+  display: flex; /* Display as flex container  */
+  flex-direction: column; /* Arrange items in column */
+  max-width: 80rem; /* Maximum width */
+  padding: 1rem; /* padding of 1rem */
+}
+
+.footer-top {
+  display: flex; /* Display as flex container  */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Aliugn items space between  */
+  padding: 1rem 0px; /* padding top and bottom 1rem and left and right 0px */
+}
+
+.footer-subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-subscribe > input {
+  border: 1px solid var(--color-quaternary);
+  height: 2.25rem;
+  outline: none;
+  padding: 0.5rem 0.75re;
+}
+.footer-subscribe > button {
+  height: 2.25rem;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.social-links ul {
+  display: flex;
+}
